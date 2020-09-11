@@ -1,6 +1,7 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
+
 module.exports = {
     getIPAdress: function() { //获取IP
         const interfaces = require('os').networkInterfaces();

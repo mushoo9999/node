@@ -37,7 +37,7 @@ $(function() {
         }
     };
     let tree = $.fn.zTree.init($("#tree"), setting);
-    $.get('/getTree').done(function(res) {
+    $.get('/api/getTree').done(function(res) {
         let nodes = res.data;
         nodes[0].name = '目录';
         tree = $.fn.zTree.init($("#tree"), setting, nodes);

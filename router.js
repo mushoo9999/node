@@ -1,15 +1,21 @@
 'use strict';
 const
-    express = require(`express`),
+    express = require('express'),
     router = express.Router(),
-    { filesTree } = require('./utils');
-module.exports = [{
-    type: 'get',
-    url: '/getTree',
-    callback: (req, res, next) => {
-        res.json({
-            data: filesTree('static/html')
-        })
-    }
-}];
-module.exports=router
+    { filesTree } = require('./utils'),
+    config = [{
+        type: 'get',
+        url: '/getTree',
+        callback: (req, res, next) => {
+            res.json({
+                status: 200,
+                data: filesTree('static/html')
+            })
+        }
+    }];
+
+config.map((value, index, arr) => {
+    router[value.type](value.url, value.callback);
+});
+
+module.exports = router;
