@@ -1,0 +1,28 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "conf.js",
+  "scripts": {
+    "start": "node conf"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mushoo9999/node.git"
+  },
+  "author": "Jean",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mushoo9999/node/issues"
+  },
+  "homepage": "https://github.com/mushoo9999/node#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "http-proxy-middleware": "^1.0.5",
+    "http-server": "^0.12.3",
+    "path": "^0.12.7"
+  }
+}
