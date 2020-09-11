@@ -18,6 +18,7 @@
 </body>
 <script type="text/javascript">
 $(function() {
+    $.ajaxSetup({ contentType: "application/json; charset=utf-8" });
     const setting = {
         callback: {
             onClick: function(e, id, treeNode) {
@@ -43,6 +44,12 @@ $(function() {
         tree = $.fn.zTree.init($("#tree"), setting, nodes);
         tree.expandAll(true);
     });
+    $.post('/api/post', JSON.stringify({
+        name: "1",
+        code: "2"
+    })).done(function(res) {
+        console.log(res);
+    })
 });
 </script>
 
